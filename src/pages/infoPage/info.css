@@ -1,0 +1,210 @@
+.containerInfo {
+  column-count: 3;
+  width: 901px;
+  height: 371px;
+  background-color: #f7f7f9;
+  display: flex;
+  margin-left: 200px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.15));
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 9px;
+}
+
+.leftContent {
+  width: 283px;
+}
+.rightContent {
+  width: 562px;
+}
+
+.lineDraw {
+  width: 0px;
+  height: 264px;
+  border: 1px solid #d7d7d7;
+  transform: rotate(180deg);
+
+  margin-top: 48px;
+  margin-right: 37px;
+}
+
+.cardInfo {
+  width: 367px;
+  height: 371px;
+}
+
+.cardIdInfo {
+  width: 132.61px;
+  height: 23px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #373299;
+  padding-top: 13px;
+  margin-left: 14px;
+}
+
+.cardImgInfo {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  padding: 40px 40px 40px 10px;
+}
+
+.cardNameInfo {
+  position: absolute;
+  width: 151px;
+  height: 33px;
+
+  margin-top: 225px;
+  margin-left: 60px;
+  margin: 225px 660px 84px 71px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #373299;
+}
+
+.abilities {
+  display: flex;
+  margin-top: 277px;
+  margin-left: 30px;
+}
+
+.abilitiesGroup {
+  width: 80px;
+  height: 35px;
+  border-radius: 9px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+
+  color: #f7f7f9;
+
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  margin-left: 12px;
+}
+
+.desTitle {
+  width: 177px;
+  height: 26px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+
+  margin-top: 44px;
+  color: #373299;
+}
+
+.details {
+  width: 349px;
+  height: 67px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  margin-top: 9px;
+  color: #020166;
+}
+
+.statsTitle {
+  width: 177px;
+  height: 26px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+
+  margin-top: 46px;
+  color: #373299;
+}
+
+.base-stat {
+  column-count: 3;
+  height: 67px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  margin-top: 9px;
+
+  color: #020166;
+}
+
+.normal {
+  background-color: #a8a77a;
+}
+.fire {
+  background-color: #ee8130;
+}
+.water {
+  background-color: #6390f0;
+}
+.electric {
+  background-color: #f7d02c;
+}
+.grass {
+  background-color: #7ac74c;
+}
+.ice {
+  background-color: #96d9d6;
+}
+.fighting {
+  background-color: #c22e28;
+}
+.poison {
+  background-color: #a33ea1;
+}
+.ground {
+  background-color: #e2bf65;
+}
+.flying {
+  background-color: #a98ff3;
+}
+.psychic {
+  background-color: #f95587;
+}
+.bug {
+  background-color: #a6b91a;
+}
+.rock {
+  background-color: #b6a136;
+}
+.ghost {
+  background-color: #735797;
+}
+.dragon {
+  background-color: #6f35fc;
+}
+.dark {
+  background-color: #705746;
+}
+.steel {
+  background-color: #b7b7ce;
+}
+.fairy {
+  background-color: #d685ad;
+}
