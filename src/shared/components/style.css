@@ -6,12 +6,6 @@
 }
 
 .container {
-  width: 1283px;
+  width: 100%; /* width: 1283px */
   height: 1307px;
-  margin-bottom: 70px;
 }
-
-
-@media only screen and (max-width: 600px) {
-  
-} 

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Card from "../../shared/components/Card/Card";
 import logo from "../../shared/logo.png";
 
-import { fetchDataFunc } from "../../services/Fetch";
 import { IPokemon, IPokemonInfo } from "../../helpers/interface";
 
 import "./Home.css";
@@ -60,15 +59,18 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        <img src={logo} className="logo" alt="logo" />
-        <input
-          className="searchInput"
-          placeholder="Enter Pokemon name"
-          onChange={(e) => searchItems(e.target.value)}
-        />
+        <div className="header">
+          <img src={logo} className="logo" alt="logo" />
+          <div className={"search"}>
+            <input
+              className="searchInput"
+              placeholder="Enter Pokemon name"
+              onChange={(e) => searchItems(e.target.value)}
+            />
 
-        <button className="searchBtn">Search</button>
-
+            <button className="searchBtn">Search</button>
+          </div>
+        </div>
         <div className="row">
           {searchInput === ""
             ? pokeData &&
@@ -97,11 +99,13 @@ const Home = () => {
                 ))}
         </div>
 
-        {nextUrl && (
-          <button className="loadBtn" onClick={loadMore}>
-            Load more...
-          </button>
-        )}
+        <div className={"load-btn-container"}>
+          {nextUrl && (
+            <button className="loadBtn" onClick={loadMore}>
+              Load more...
+            </button>
+          )}
+        </div>
       </div>
     </>
   );

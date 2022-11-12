@@ -18,7 +18,9 @@ const Info = () => {
 
   return (
     <>
-      <img src={logo} className="logo" alt="logo" />
+      <div className="header">
+        <img src={logo} className="logo" alt="logo" />
+      </div>
       <div className="containerInfo">
         <div className="leftContent">
           <div className="cardInfo" key={pokemon.id}>
