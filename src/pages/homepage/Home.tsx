@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Card from "../../shared/components/Card/Card";
-import logo from "../../shared/logo.png";
 
 import { IPokemon, IPokemonInfo } from "../../helpers/interface";
 
 import "./Home.css";
+import Navbar from "../../shared/components/Navbar";
 
 const Home = () => {
   const [url, setUrl] = useState<string>("https://pokeapi.co/api/v2/pokemon/");
+  const [searchInput, setSearchInput] = useState<string>("");
+
   const [nextUrl, setNextUrl] = useState<string>("");
   const [pokeData, setPokeData] = useState<IPokemonInfo[]>([]);
   const [pokeDescription, setPokeDescription] = useState<string>("");
-  const [searchInput, setSearchInput] = useState<string>("");
   let allPokemon: IPokemon[] = [];
 
   useEffect(() => {
@@ -22,7 +23,6 @@ const Home = () => {
     try {
       const apiData = await (await fetch(ourUrl)).json();
       allPokemon = [...pokeData, ...apiData.results];
-
       if (apiData.next != "") setNextUrl(apiData.next);
       else setNextUrl(" ");
 
@@ -48,26 +48,25 @@ const Home = () => {
     setPokeDescription(item);
   };
 
-  const loadMore = async () => {
-    await fetchData(nextUrl);
-  };
-
   const searchItems = (searchValue: string) => {
     setSearchInput(searchValue.toLowerCase());
+  };
+
+  const loadMore = async () => {
+    await fetchData(nextUrl);
   };
 
   return (
     <>
       <div className="container">
+        <Navbar />
         <div className="header">
-          <img src={logo} className="logo" alt="logo" />
           <div className={"search"}>
             <input
               className="searchInput"
-              placeholder="Enter Pokemon name"
+              placeholder="Enter Pokemon Name"
               onChange={(e) => searchItems(e.target.value)}
             />
-
             <button className="searchBtn">Search</button>
           </div>
         </div>

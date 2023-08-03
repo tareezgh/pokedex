@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { useLocation, useParams } from "react-router";
+import { useLocation } from "react-router";
 import {
   capitalizeFirstLetter,
   formatPokemonId,
   formatStatName,
 } from "../../helpers/help";
-import logo from "../../shared/logo.png";
 import { IPokemonInfo } from "../../helpers/interface";
 
 import "./info.css";
+import Navbar from "../../shared/components/Navbar";
 
 const Info = () => {
   const location = useLocation();
@@ -18,9 +17,7 @@ const Info = () => {
 
   return (
     <>
-      <div className="header">
-        <img src={logo} className="logo" alt="logo" />
-      </div>
+      <Navbar />
       <div className="containerInfo">
         <div className="leftContent">
           <div className="cardInfo" key={pokemon.id}>
@@ -58,9 +55,8 @@ const Info = () => {
           <h2 className="statsTitle">Stats</h2>
           <div className="base-stat">
             {pokemon.stats.map((stat, base_stat) => {
-              {
-                stateSum += +pokemon.stats[base_stat].base_stat;
-              }
+              stateSum += +pokemon.stats[base_stat].base_stat;
+
               return (
                 <>
                   <div>
